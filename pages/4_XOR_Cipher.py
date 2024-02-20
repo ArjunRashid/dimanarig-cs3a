@@ -41,5 +41,5 @@ if st.button("Submit"):
         st.write("Ciphertext:", encrypted_text.decode())
         decrypted_text = xor_decrypt(encrypted_text, key)
         st.write("Decrypted:", plaintext.decode())
-        st.write(plaintext)
+        st.write(str(plaintext))
 
