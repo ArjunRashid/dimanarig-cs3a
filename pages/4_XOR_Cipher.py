@@ -23,6 +23,7 @@ def xor_encrypt(plaintext, key):
     return ciphertext
 
 
+
 def xor_decrypt(ciphertext, key):
     """Decrypts ciphertext using XOR cipher with the given key."""
     return xor_encrypt(ciphertext, key)   # XOR decryption is the same as encryption
