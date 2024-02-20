@@ -15,7 +15,7 @@ def xor_encrypt(plaintext, key):
         key_byte =  key[i % len(key)]
         encrypted_byte = input_text_byte ^ key_byte
         ciphertext.append(encrypted_byte)
-        st.write(f"plaintext byte: {format(input_text_byte, '08b')} = {chr(input_text_byte)}")
+        st.write(f"Plaintext byte: {format(input_text_byte, '08b')} = {chr(input_text_byte)}")
         st.write(f"Key byte:       {format(key_byte, '08b')} = {chr(key_byte)}")
         st.write(f"XOR result:     {format(encrypted_byte, '08b')} = {chr(encrypted_byte)}")
         
@@ -32,10 +32,10 @@ def xor_decrypt(ciphertext, key):
 
 if st.button("Submit"):
     if plaintext.decode() == key.decode():
-        st.write("plaintext should not be equal to the key")
+        st.write("Plaintext should not be equal to the key")
     
     elif len(key.decode()) > len(plaintext.decode()):
-        st.write("plaintext length should be equal or greater than the length of key")
+        st.write("Plaintext length should be equal or greater than the length of key")
     else:
         encrypted_text = xor_encrypt(plaintext, key)
         st.write("Ciphertext:", encrypted_text.decode())
