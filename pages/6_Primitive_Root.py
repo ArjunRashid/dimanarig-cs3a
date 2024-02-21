@@ -1,7 +1,10 @@
 import streamlit as st
 
+st.divider()
 st.header("Primitive Root")
 st.snow()
+st.text('by Arjun Rashid Dimanarig')
+st.divider()
 
 def is_prime(n):
     if n <= 1:
@@ -57,4 +60,5 @@ if st.button("Submit"):
     except ValueError:
         st.write("Please enter valid integers for both numbers.")
     st.balloons()
-    
+
+st.divider()    
