@@ -32,8 +32,11 @@ def xor_decrypt(ciphertext, key):
 
 if st.button("Submit"):
     if plaintext.decode() == key.decode():
-        st.write("Plaintext should not be equal to the key")
-    
+        st.write("No input at all")
+    elif not plaintext:
+        st.error("No Input in the textbox!")
+    elif not key:
+        st.error("No input for key!")
     elif len(key.decode()) > len(plaintext.decode()):
         st.write("Plaintext length should be equal or greater than the length of key")
     else:
@@ -41,5 +44,6 @@ if st.button("Submit"):
         st.write("Ciphertext:", encrypted_text.decode())
         decrypted_text = xor_decrypt(encrypted_text, key)
         st.write("Decrypted:", plaintext.decode())
+    st.balloons()
         
 
